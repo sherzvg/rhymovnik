@@ -1,6 +1,6 @@
-# Большие файлы данных (слишком велики для GitHub)
+# Исходный словарь (35 МБ — слишком велик для GitHub)
 backend/data/russian_words.txt
-backend/data/word_metadata.json
+# word_metadata.json генерируется через generate_db.py и коммитится
 
 # Python
 __pycache__/
