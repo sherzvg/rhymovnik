@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f0ff 0%, #e6f3ff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 3em;
+    color: #6b46c1;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 1.1em;
+}
+
+.icon {
+    font-size: 1.5em;
+}
+
+/* Секция поиска */
+.search-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #6b46c1;
+    box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.1);
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background: #6b46c1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: #553c9a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(107, 70, 193, 0.3);
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background: transparent;
+    color: #6b46c1;
+    border: 2px solid #6b46c1;
+    border-radius: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-secondary:hover {
+    background: #f5f0ff;
+}
+
+/* Панель фильтров */
+.filters-panel {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+.filters-panel.hidden {
+    display: none;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.9em;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #6b46c1;
+}
+
+/* Примеры слов */
+.examples-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.examples-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.examples-header h3 {
+    color: #2d3748;
+    font-size: 1.2em;
+}
+
+.examples-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.example-word {
+    padding: 12px 20px;
+    background: #f5f0ff;
+    color: #6b46c1;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.example-word:hover {
+    background: #6b46c1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Результаты */
+.results-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.results-section.hidden {
+    display: none;
+}
+
+.results-header {
+    margin-bottom: 25px;
+}
+
+.results-header h2 {
+    color: #2d3748;
+    font-size: 1.8em;
+}
+
+.rhymes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rhyme-card {
+    padding: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.rhyme-card:hover {
+    border-color: #6b46c1;
+    box-shadow: 0 5px 15px rgba(107, 70, 193, 0.1);
+}
+
+.rhyme-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rhyme-word-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rhyme-word {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #6b46c1;
+}
+
+.rhyme-pos {
+    font-size: 0.9em;
+    color: #718096;
+    font-style: italic;
+}
+
+.rhyme-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.badge-freq-high {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.badge-freq-medium {
+    background: #feebc8;
+    color: #c05621;
+}
+
+.badge-freq-low {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.badge-syllables {
+    background: #e2e8f0;
+    color: #2d3748;
+}
+
+.rhyme-example {
+    color: #4a5568;
+    font-size: 0.95em;
+}
+
+.rhyme-example strong {
+    color: #2d3748;
+}
+
+/* Загрузка */
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #6b46c1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading p {
+    color: #718096;
+    font-size: 1.1em;
+}
+
+/* Отсутствие результатов */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.no-results.hidden {
+    display: none;
+}
+
+.no-results p {
+    font-size: 1.3em;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.no-results .hint {
+    font-size: 0.95em;
+    color: #a0aec0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .filters-panel {
+        grid-template-columns: 1fr;
+    }
+    
+    .rhyme-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

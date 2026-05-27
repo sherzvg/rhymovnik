@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рифмовник - Умный поиск рифм</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <header class="header">
+            <div class="header-content">
+                <span class="icon">✨</span>
+                <h1>Рифмовник</h1>
+            </div>
+            <p class="subtitle">Умный поиск рифм с фильтрами</p>
+        </header>
+
+        <!-- Поиск -->
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Введите слово..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="btn-primary">
+                    <span class="icon">🔍</span>
+                    Найти
+                </button>
+            </div>
+
+            <button id="toggleFilters" class="btn-secondary">
+                <span class="icon">⚙️</span>
+                <span id="filterToggleText">Показать фильтры</span>
+            </button>
+
+            <!-- Фильтры -->
+            <div id="filtersPanel" class="filters-panel hidden">
+                <div class="filter-group">
+                    <label>Часть речи</label>
+                    <select id="posFilter">
+                        <option value="all">Все</option>
+                        <option value="существительное">Существительное</option>
+                        <option value="глагол">Глагол</option>
+                        <option value="прилагательное">Прилагательное</option>
+                        <option value="наречие">Наречие</option>
+                        <option value="местоимение">Местоимение</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Частота использования</label>
+                    <select id="freqFilter">
+                        <option value="all">Все</option>
+                        <option value="high">Частые (избегать банальных)</option>
+                        <option value="medium">Средние</option>
+                        <option value="low">Редкие (оригинальные)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Количество слогов</label>
+                    <select id="syllablesFilter">
+                        <option value="all">Все</option>
+                        <option value="1">1 слог</option>
+                        <option value="2">2 слога</option>
+                        <option value="3">3 слога</option>
+                        <option value="4">4+ слога</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Примеры слов -->
+        <div id="examplesSection" class="examples-section">
+            <div class="examples-header">
+                <span class="icon">📖</span>
+                <h3>Попробуйте эти слова:</h3>
+            </div>
+            <div class="examples-grid" id="examplesGrid"></div>
+        </div>
+
+        <!-- Результаты -->
+        <div id="resultsSection" class="results-section hidden">
+            <div class="results-header">
+                <h2>Найдено рифм: <span id="rhymeCount">0</span></h2>
+            </div>
+            <div id="rhymesList" class="rhymes-list"></div>
+        </div>
+
+        <!-- Загрузка -->
+        <div id="loadingSpinner" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Ищем рифмы...</p>
+        </div>
+
+        <!-- Сообщение об отсутствии результатов -->
+        <div id="noResults" class="no-results hidden">
+            <p>Рифмы не найдены 😔</p>
+            <p class="hint">Попробуйте другое слово или измените фильтры</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

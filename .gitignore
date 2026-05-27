@@ -1,0 +1,21 @@
+# Большие файлы данных (слишком велики для GitHub)
+backend/data/russian_words.txt
+backend/data/word_metadata.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.Python
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
