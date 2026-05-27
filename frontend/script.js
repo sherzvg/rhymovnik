@@ -1,4 +1,4 @@
-const API_URL = 'https://rhymovnik-api.onrender.com';
+const API_URL = 'https://rhymovnik-api.onrender.com/api';
 
 // Примеры слов
 const exampleWords = [
